@@ -1,0 +1,136 @@
+.about {
+  @media (max-width: 767px) {
+    margin: 19px 0 80px;
+  }
+}
+
+.about__container {
+  display: grid;
+  grid-template-areas:
+    "img text"
+    "img btn";
+  grid-template-columns: 150px 1fr;
+  grid-column-gap: 100px;
+  margin-top: 123px;
+
+  @media (max-width: 1023px) {
+    margin-top: 78px;
+    grid-column-gap: 25px;
+  }
+
+  @media (max-width: 767px) {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+.about__img-wrapper {
+  grid-area: img;
+
+  @media (max-width: 1023px) {
+    position: relative;
+    width: 150px;
+    height: 320px;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.about__img-wrapper img {
+  @media (max-width: 1023px) {
+    position: absolute;
+    right: 4px;
+    top: 2px;
+  }
+}
+
+.about__text-wrapper {
+  max-width: 970px;
+  overflow: hidden;
+  grid-area: text;
+
+  @media (max-width: 1023px) {
+    padding-right: 0;
+  }
+}
+
+.about__title {
+  font: {
+    family: $roboto-condensed-regular;
+    size: 36px;
+    weight: 400;
+  }
+  line-height: 50px;
+  color: $color-black-pearl;
+  margin: 0;
+  padding-bottom: 12px;
+
+  @media (max-width: 767px) {
+    font-size: 28px;
+    line-height: 40px;
+    padding-bottom: 10px;
+  }
+}
+
+.about p {
+  font: {
+    family: $ptmono-regular;
+    size: 16px;
+    weight: 400;
+  }
+  line-height: 21px;
+  color: $color-black-pearl;
+  margin: 0;
+  margin-bottom: 22px;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 16px;
+  }
+}
+
+.about__text--tablet {
+  @media (max-width: 1023px) {
+    display: block;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.about__button {
+  font: {
+    family: $roboto-condensed-bold;
+    size: 14px;
+    weight: 700;
+  }
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $color-deep-sky-blue;
+  border-color: $color-deep-sky-blue;
+  background-color: $color-default-white;
+  text-transform: uppercase;
+  width: 180px;
+  height: 47px;
+  padding: 10px 15px;
+  grid-area: btn;
+  cursor: pointer;
+
+  &--nojs {
+    @include is-hidden;
+  }
+
+  @include hover-focus {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 767px) {
+    width: 159px;
+    height: 36px;
+    padding: 7px 15px;
+  }
+}

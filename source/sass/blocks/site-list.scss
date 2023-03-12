@@ -1,0 +1,12 @@
+.site-list {
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.site-list__col-2 {
+  @media (min-width: 1024px) {
+    padding-left: 40px;
+  }
+}

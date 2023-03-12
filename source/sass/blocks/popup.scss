@@ -1,0 +1,103 @@
+.popup {
+  width: 500px;
+  top: 145px;
+}
+
+.popup input {
+  @include form-text;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-color: $color-pacific-blue;
+  padding: 12px 0 15px 15px;
+
+  &::placeholder {
+    @include form-text;
+  }
+
+  @include hover-focus {
+    border-color: $color-school-bus-yellow;
+  }
+}
+
+.popup form {
+  display: grid;
+  grid-template-areas:
+    "name"
+    "tel"
+    "text"
+    "btn"
+    "agree";
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+.popup__title {
+  font: {
+    family: $roboto-condensed-regular;
+    size: 30px;
+    weight: 400;
+  }
+  line-height: 42px;
+  color: $color-default-white;
+  margin: 0;
+  padding-bottom: 3px;
+}
+
+.popup__subtitle {
+  font: {
+    family: $ptmono-regular;
+    size: 16px;
+    weight: 400;
+  }
+  line-height: 21px;
+  color: $color-default-white;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+.popup form textarea {
+  padding: 22px 0 88px 15px;
+  margin: 0;
+
+  @include hover-focus {
+    border: 1px solid $color-school-bus-yellow;
+  }
+}
+
+.popup form button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  margin-top: 5px;
+
+  @include hover-focus {
+    color: $color-school-bus-yellow;
+  }
+}
+
+.popup__form-agree {
+  grid-area: agree;
+  margin-left: 35px;
+  position: relative;
+}
+
+.popup__form-agree label {
+  @include form-text;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.popup__form-agree input {
+  appearance: none;
+  padding: 0;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 5px;
+  margin-left: -28px;
+  background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
+}
+
+.popup__form-agree input:checked {
+  background: url("../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
+}

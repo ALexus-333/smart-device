@@ -1,0 +1,94 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 60px 0 0;
+}
+
+.menu__contacts {
+  width: 460px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+
+  @media (max-width: 1023px) {
+    padding: 0 30px 10px 0;
+    width: 110px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100px;
+    margin: 0;
+    padding: 0 20px 4px 0;
+  }
+}
+
+.menu__text {
+  font: {
+    family: $ptmono-regular;
+    size: 16px;
+    weight: 400;
+  }
+  line-height: 18px;
+  color: $color-alice-blue;
+  padding-left: 10px;
+
+  @include hover-focus {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.menu__button {
+  width: 160px;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  border: 1px solid $color-alice-blue;
+  padding: 10px 15px;
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  word-break: break-word;
+  margin-top: 7px;
+
+  @include hover-focus {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 1023px) {
+    @include is-hidden;
+  }
+}
+
+.menu__email-icon,
+.menu__phone-icon {
+  width: 20px;
+  height: 20px;
+  fill: $color-deep-sky-blue;
+
+  @include hover-focus {
+    fill: $color-school-bus-yellow;
+  }
+}
+
+.menu__logo {
+  width: 215px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    width: 35px;
+  }
+}
+
+.menu__logo img {
+  width: 100%;
+}

@@ -1,0 +1,32 @@
+.social-list {
+  margin: 10px 45px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  min-width: 167px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media (max-width: 1023px) {
+    min-width: 150px;
+    justify-content: space-between;
+    margin: 0;
+    padding-top: 9px;
+  }
+
+  @media (min-width: 321px) and (max-width: 768px) {
+    padding-top: 2px;
+  }
+}
+
+.social-list__item {
+  cursor: pointer;
+}
+
+.social-list__item svg {
+  fill: $color-default-white;
+
+  @include hover-focus {
+    opacity: 0.9;
+  }
+}

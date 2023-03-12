@@ -1,0 +1,153 @@
+.accordion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+
+  @media (max-width: 1023px) {
+    grid-column-gap: 30px;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.accordion__wrapper {
+  @media (max-width: 767px) {
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s max-height ease-out;
+
+    &.no-js {
+      max-height: 100%;
+    }
+  }
+}
+
+.accordion__item {
+  overflow: hidden;
+
+  &--site-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-column-gap: 10px;
+  }
+
+  &--contacts {
+    @media (min-width: 1024px) {
+      padding-left: 67px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    border-bottom: 1px solid $color-default-white;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 25px;
+  }
+}
+
+.accordion__title {
+  font: {
+    family: $roboto-condensed-regular;
+    size: 15px;
+    weight: 400;
+  }
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  padding: 10px 0 7px;
+  position: relative;
+  transition: 0.3s;
+  cursor: default;
+
+  @media (max-width: 1023px) {
+    padding: 0 0 8px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 21px 0;
+    margin: 0;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 50%;
+      width: 15px;
+      height: 2px;
+      background-color: $color-default-white;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: 6px;
+      top: 50%;
+      width: 2px;
+      height: 15px;
+      background-color: $color-default-white;
+      transform: translateY(-50%);
+      transition: 0.3 opacity;
+    }
+
+    &.active::after {
+      opacity: 0;
+    }
+
+    &--none {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.accordion__list {
+  font: {
+    family: $ptmono-regular;
+    size: 16px;
+    weight: 400;
+  }
+  line-height: 21px;
+  color: $color-default-white;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.accordion__list a {
+  color: $color-default-white;
+}
+
+.accordion__list-item {
+  cursor: pointer;
+  padding-bottom: 9px;
+
+  @media (max-width: 767px) {
+    padding-bottom: 15px;
+  }
+}
+
+.accordion__list-item br {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.accordion__list-item a {
+  @include hover-focus {
+    opacity: 0.9;
+  }
+}

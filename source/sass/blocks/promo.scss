@@ -1,0 +1,133 @@
+.promo {
+  background: url("../img/promo/promo-bg.jpg") center (center/cover) no-repeat;
+  background-color: $color-black-pearl;
+  padding-bottom: 280px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/promo/promo-bg@2x.jpg");
+  }
+
+  @media (max-width: 1023px) {
+    padding-bottom: 207px;
+    margin-bottom: 0;
+    background-position: -123px 0;
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 190px;
+    margin: 0;
+    background-position: -228px 0;
+  }
+}
+
+.promo__content-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 305px 0 0 125px;
+
+  @media (max-width: 1023px) {
+    padding: 180px 0 0 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 150px 0 0 0;
+  }
+}
+
+.promo__content-wrapper h1 {
+  font: {
+    family: $roboto-condensed-bold;
+    size: 80px;
+    weight: 700;
+  }
+  line-height: 94px;
+  color: $color-alice-blue;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 32px;
+
+  @media (max-width: 1023px) {
+    font-size: 64px;
+    line-height: 75px;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 36px;
+    line-height: 42px;
+    padding-bottom: 8px;
+  }
+}
+
+.promo__content-wrapper p {
+  font: {
+    family: $ptmono-regular;
+    size: 22px;
+    weight: 400;
+  }
+  line-height: 34px;
+  color: $color-alice-blue;
+  margin: 0;
+  padding-bottom: 47px;
+
+  @media (max-width: 1023px) {
+    padding-bottom: 58px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 21px;
+    padding-bottom: 45px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.promo__button {
+  width: 410px;
+  font: {
+    size: 18px;
+    weight: 700;
+  }
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 16px 25px;
+  background-color: $color-deep-sky-blue;
+  border: none;
+  cursor: pointer;
+
+  &--nojs {
+    @include is-hidden;
+  }
+
+  @include hover-focus {
+    opacity: 0.9;
+  }
+
+  &--mobile {
+    display: none;
+  }
+
+  @media (max-width: 1023px) {
+    margin-left: 46px;
+  }
+
+  @media (max-width: 767px) {
+    width: 270px;
+    display: none;
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 25px;
+
+    &--mobile {
+      display: block;
+    }
+  }
+}

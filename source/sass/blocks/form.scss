@@ -1,0 +1,98 @@
+
+form {
+  display: grid;
+  grid-template-areas:
+    "name tel"
+    "text text"
+    "btn agree";
+
+  grid-column-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 767px) {
+    grid-template-areas:
+      "name"
+      "tel"
+      "text"
+      "btn"
+      "agree";
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+
+  @include form-template;
+}
+
+.form__field input {
+  border: 1px solid transparent;
+
+  @include hover-focus {
+    border: 1px solid $color-default-white;
+  }
+}
+
+form textarea {
+  margin: 19px 0 34px;
+  border: 1px solid transparent;
+
+  @include hover-focus {
+    border: 1px solid $color-default-white;
+  }
+
+  @media (max-width: 1023px) {
+    margin: 20px 0 36px;
+    padding: 30px 0 79px 15px;
+  }
+
+  @media (max-width: 767px) {
+    margin: 0 0 9px;
+    padding: 24px 0 114px 15px;
+  }
+}
+
+form button[type="submit"] {
+  padding: 10px;
+  width: 265px;
+
+  @include hover-focus {
+    opacity: 0.9;
+  }
+
+  @media (max-width: 1023px) {
+    padding: 14px 25px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    margin: 0 0 5px 0;
+  }
+}
+
+.form__agree label {
+  margin-top: 16px;
+}
+
+/* Checkbox */
+
+.form__agree input {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 23px;
+  margin-left: -28px;
+  background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
+
+  @media (max-width: 1023px) {
+    top: 17px;
+    margin-left: -26px;
+  }
+
+  @media (max-width: 767px) {
+    top: 5px;
+    margin-left: -27px;
+  }
+}
+
+.form__agree input:checked {
+  background: url("../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
+}
