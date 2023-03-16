@@ -405,7 +405,7 @@ template {
   font-weight: 400;
   font-family: "Roboto Condensed Regular";
   font-display: swap;
-  src: url("../../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../../fonts/roboto-condensed-regular.woff") format("woff");
+  src: url("../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-regular.woff") format("woff");
 }
 
 @font-face {
@@ -413,15 +413,7 @@ template {
   font-weight: 700;
   font-family: "Roboto Condensed Bold";
   font-display: swap;
-  src: url("../../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../../fonts/roboto-condensed-bold.woff") format("woff");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "Rouble";
-  font-display: swap;
-  src: url("../../fonts/rouble.woff2") format("woff2"), url("../../fonts/rouble.woff") format("woff");
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
 }
 
 *,
@@ -1206,7 +1198,7 @@ form > .about__button {
   margin: 0;
 }
 
-.products__btn {
+.products__arrow-wrapper {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1215,12 +1207,6 @@ form > .about__button {
   background-color: #00b2ff;
   border-radius: 3px;
   cursor: pointer;
-}
-
-.products__arrow-wrapper {
-  position: relative;
-  width: 60px;
-  height: 60px;
 }
 
 .products__arrow {
@@ -2229,11 +2215,6 @@ form button[type=submit].focus-visible:focus {
     font-size: 18px;
     line-height: 30px;
     padding: 25px 105px 0 30px;
-  }
-
-  .products__btn {
-    width: 40px;
-    height: 40px;
   }
 
   .products__arrow-wrapper {
