@@ -1067,13 +1067,13 @@ button,
   grid-area: text;
 }
 
-form > .about__text-wrapper {
+.feedback__form > .about__text-wrapper {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
 
-.popup form > .about__text-wrapper {
+.popup__form > .about__text-wrapper {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -1118,12 +1118,12 @@ form > .about__text-wrapper {
   cursor: pointer;
 }
 
-form > .about__button {
+.feedback__form > .about__button {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
 }
 
-.popup form > .about__button {
+.popup__form > .about__button {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
 }
@@ -1233,6 +1233,15 @@ form > .about__button {
   grid-column-gap: 30px;
 }
 
+.feedback__form {
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "name tel" "text text" "btn agree";
+  grid-column-gap: 30px;
+  -ms-grid-columns: 1fr 30px 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
 .feedback__img-wrapper {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -1265,16 +1274,7 @@ form > .about__button {
   margin: 0 0 32px 0;
 }
 
-form {
-  display: -ms-grid;
-  display: grid;
-  grid-template-areas: "name tel" "text text" "btn agree";
-  grid-column-gap: 30px;
-  -ms-grid-columns: 1fr 30px 1fr;
-  grid-template-columns: 1fr 1fr;
-}
-
-form .form__field input {
+.form .form__field input {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1286,7 +1286,7 @@ form .form__field input {
   padding: 15px 0 15px 15px;
 }
 
-form .form__field input::-webkit-input-placeholder {
+.form .form__field input::-webkit-input-placeholder {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1294,7 +1294,7 @@ form .form__field input::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-form .form__field input::-moz-placeholder {
+.form .form__field input::-moz-placeholder {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1302,7 +1302,7 @@ form .form__field input::-moz-placeholder {
   color: #ffffff;
 }
 
-form .form__field input:-ms-input-placeholder {
+.form .form__field input:-ms-input-placeholder {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1310,7 +1310,7 @@ form .form__field input:-ms-input-placeholder {
   color: #ffffff;
 }
 
-form .form__field input::-ms-input-placeholder {
+.form .form__field input::-ms-input-placeholder {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1318,7 +1318,7 @@ form .form__field input::-ms-input-placeholder {
   color: #ffffff;
 }
 
-form .form__field input::placeholder {
+.form .form__field input::placeholder {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1326,22 +1326,21 @@ form .form__field input::placeholder {
   color: #ffffff;
 }
 
-form .form__field input[type=name] {
+.form .form__field input[type=name] {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: name;
 }
 
-form .form__field input[type=tel] {
+.form .form__field input[type=tel] {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: tel;
 }
 
-form textarea {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+.form textarea {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
@@ -1352,7 +1351,7 @@ form textarea {
   border-radius: 3px;
 }
 
-form textarea::-webkit-input-placeholder {
+.form textarea::-webkit-input-placeholder {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1360,7 +1359,7 @@ form textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-form textarea::-moz-placeholder {
+.form textarea::-moz-placeholder {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1368,7 +1367,7 @@ form textarea::-moz-placeholder {
   color: #ffffff;
 }
 
-form textarea:-ms-input-placeholder {
+.form textarea:-ms-input-placeholder {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1376,7 +1375,7 @@ form textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 
-form textarea::-ms-input-placeholder {
+.form textarea::-ms-input-placeholder {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1384,7 +1383,7 @@ form textarea::-ms-input-placeholder {
   color: #ffffff;
 }
 
-form textarea::placeholder {
+.form textarea::placeholder {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1392,9 +1391,9 @@ form textarea::placeholder {
   color: #ffffff;
 }
 
-form button[type=submit] {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
+.form button[type=submit] {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   width: 100%;
   font-family: "Roboto Condensed Bold", "Arial", sans-serif;
   font-weight: 700;
@@ -1410,7 +1409,7 @@ form button[type=submit] {
   text-transform: uppercase;
 }
 
-form .form__agree {
+.form .form__agree {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
   font-family: "PTMono Regular", "Arial", sans-serif;
@@ -1425,56 +1424,80 @@ form .form__agree {
   padding: 15px 0 0 37px;
 }
 
-form .form__agree input {
+.form .form__agree input {
   position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.form__field input {
+.form .form__field input {
   border: 1px solid transparent;
 }
 
-.form__field input.focus-visible:focus {
+.form .form__field input.focus-visible:focus {
   border: 1px solid #ffffff;
 }
 
-form textarea {
-  margin: 19px 0 34px;
-  border: 1px solid transparent;
+.form .form__field--agree {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: agree;
+  margin-left: 35px;
+  position: relative;
 }
 
-form textarea.focus-visible:focus {
-  border: 1px solid #ffffff;
-}
-
-form button[type=submit] {
-  padding: 10px;
-  width: 265px;
-}
-
-form button[type=submit].focus-visible:focus {
-  opacity: 0.9;
-}
-
-.form__agree label {
+.form .form__field--agree span {
+  font-family: "PTMono Regular", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #ffffff;
+  display: block;
   margin-top: 16px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
-/* Checkbox */
-
-.form__agree input {
+.form .form__field--agree input {
+  margin-top: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   position: absolute;
   width: 15px;
   height: 15px;
-  top: 23px;
+  top: 5px;
   margin-left: -28px;
   background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
 }
 
-.form__agree input:checked {
+.form .form__field--agree input:checked {
   background: url("../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
+}
+
+.form .form__field--position input,
+.form .form__field--position span {
+  margin-top: 0;
+  top: 0;
+}
+
+.form textarea {
+  margin: 19px 0 34px;
+  border: 1px solid transparent;
+}
+
+.form textarea.focus-visible:focus {
+  border: 1px solid #ffffff;
+}
+
+.form button[type=submit] {
+  padding: 10px;
+  width: 265px;
+}
+
+.form button[type=submit].focus-visible:focus {
+  opacity: 0.9;
 }
 
 .social-list {
@@ -1573,6 +1596,16 @@ form button[type=submit].focus-visible:focus {
   top: 145px;
 }
 
+.popup__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 20px auto 20px auto 20px auto 20px auto;
+  grid-template-areas: "name" "tel" "text" "btn" "agree";
+  grid-row-gap: 20px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+
 .popup input {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
@@ -1630,16 +1663,6 @@ form button[type=submit].focus-visible:focus {
   border-color: #ffd801;
 }
 
-.popup form {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto 20px auto 20px auto 20px auto 20px auto;
-  grid-template-areas: "name" "tel" "text" "btn" "agree";
-  grid-row-gap: 20px;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-}
-
 .popup__title {
   font-family: "Roboto Condensed Regular", "Arial", sans-serif;
   font-size: 30px;
@@ -1660,63 +1683,23 @@ form button[type=submit].focus-visible:focus {
   padding-bottom: 40px;
 }
 
-.popup form textarea {
+.popup textarea {
   padding: 22px 0 88px 15px;
   margin: 0;
 }
 
-.popup form textarea.focus-visible:focus {
+.popup textarea.focus-visible:focus {
   border: 1px solid #ffd801;
 }
 
-.popup form button[type=submit] {
+.popup button[type=submit] {
   width: 100%;
   padding: 14px;
   margin-top: 5px;
 }
 
-.popup form button[type=submit].focus-visible:focus {
+.popup button[type=submit].focus-visible:focus {
   color: #ffd801;
-}
-
-.popup__form-agree {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: agree;
-  margin-left: 35px;
-  position: relative;
-}
-
-.popup form > .popup__form-agree {
-  -ms-grid-row: 9;
-  -ms-grid-column: 1;
-}
-
-.popup__form-agree label {
-  font-family: "PTMono Regular", "Arial", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 21px;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.popup__form-agree input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 5px;
-  margin-left: -28px;
-  background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
-}
-
-.popup__form-agree input:checked {
-  background: url("../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
 }
 
 /* @mixin hover-focus {
@@ -1987,23 +1970,18 @@ form button[type=submit].focus-visible:focus {
     margin: 0 0 25px 0;
   }
 
-  form .form__agree {
+  .form .form__agree {
     padding: 10px 0 0 25px;
     margin-top: 0;
   }
 
-  form textarea {
+  .form textarea {
     margin: 20px 0 36px;
     padding: 30px 0 79px 15px;
   }
 
-  form button[type=submit] {
+  .form button[type=submit] {
     padding: 14px 25px;
-  }
-
-  .form__agree input {
-    top: 17px;
-    margin-left: -26px;
   }
 
   .social-list {
@@ -2226,6 +2204,25 @@ form button[type=submit].focus-visible:focus {
     padding: 42px 0 82px;
   }
 
+  .feedback__form {
+    -ms-grid-rows: auto 20px auto 20px auto 20px auto 20px auto;
+    grid-template-areas: "name" "tel" "text" "btn" "agree";
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+
+  .feedback__form > .about__text-wrapper {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .feedback__form > .about__button {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+
   .feedback__title {
     font-size: 30px;
     line-height: 42px;
@@ -2237,42 +2234,49 @@ form button[type=submit].focus-visible:focus {
     margin-bottom: 34px;
   }
 
-  form {
-    -ms-grid-rows: auto 20px auto 20px auto 20px auto 20px auto;
-    grid-template-areas: "name" "tel" "text" "btn" "agree";
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
+  .form .form__agree {
+    padding: 0 0 0 32px;
   }
 
-  form > .about__text-wrapper {
+  .form .form__field input[type=name] {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .form .form__field input[type=tel] {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .feedback__form > textarea {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
   }
 
-  form > .about__button {
+  .feedback__form > button[type=submit] {
     -ms-grid-row: 7;
     -ms-grid-column: 1;
   }
 
-  form .form__agree {
-    padding: 0 0 0 32px;
+  .form .form__agree {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
   }
 
-  form textarea {
+  .form .form__field--agree {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+
+  .form textarea {
     margin: 0 0 9px;
     padding: 24px 0 114px 15px;
   }
 
-  form button[type=submit] {
+  .form button[type=submit] {
     width: 100%;
     margin: 0 0 5px 0;
-  }
-
-  .form__agree input {
-    top: 5px;
-    margin-left: -27px;
   }
 
   .accordion {
@@ -2356,37 +2360,6 @@ form button[type=submit].focus-visible:focus {
   .accordion__list-item br {
     display: none;
   }
-
-  form .form__field input[type=name] {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-
-  form .form__field input[type=tel] {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
-
-  form > textarea {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  form > button[type=submit] {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-  }
-
-  form .form__agree {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-  }
-
-  .popup__form-agree {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-  }
 }
 
 @media (min-width: 321px) and (max-width: 768px) {
@@ -2421,15 +2394,15 @@ form button[type=submit].focus-visible:focus {
     opacity: 0.9;
   }
 
-  .form__field input:hover:not(.focus-visible) {
+  .form .form__field input:hover:not(.focus-visible) {
     border: 1px solid #ffffff;
   }
 
-  form textarea:hover:not(.focus-visible) {
+  .form textarea:hover:not(.focus-visible) {
     border: 1px solid #ffffff;
   }
 
-  form button[type=submit]:hover:not(.focus-visible) {
+  .form button[type=submit]:hover:not(.focus-visible) {
     opacity: 0.9;
   }
 
@@ -2445,11 +2418,11 @@ form button[type=submit].focus-visible:focus {
     border-color: #ffd801;
   }
 
-  .popup form textarea:hover:not(.focus-visible) {
+  .popup textarea:hover:not(.focus-visible) {
     border: 1px solid #ffd801;
   }
 
-  .popup form button[type=submit]:hover:not(.focus-visible) {
+  .popup button[type=submit]:hover:not(.focus-visible) {
     color: #ffd801;
   }
 }

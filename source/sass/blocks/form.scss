@@ -1,29 +1,8 @@
-
-form {
-  display: grid;
-  grid-template-areas:
-    "name tel"
-    "text text"
-    "btn agree";
-
-  grid-column-gap: 30px;
-  grid-template-columns: 1fr 1fr;
-
-  @media (max-width: 767px) {
-    grid-template-areas:
-      "name"
-      "tel"
-      "text"
-      "btn"
-      "agree";
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
-  }
-
+.form {
   @include form-template;
 }
 
-.form__field input {
+.form .form__field input {
   border: 1px solid transparent;
 
   @include hover-focus {
@@ -31,7 +10,42 @@ form {
   }
 }
 
-form textarea {
+.form .form__field--agree {
+  grid-area: agree;
+  margin-left: 35px;
+  position: relative;
+}
+
+.form .form__field--agree span {
+  @include form-text;
+  display: block;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form .form__field--agree input {
+  margin-top: 16px;
+  appearance: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 5px;
+  margin-left: -28px;
+  background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
+}
+
+.form .form__field--agree input:checked {
+  background: url("../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
+}
+
+.form .form__field--position input,
+.form .form__field--position span {
+  margin-top: 0;
+  top: 0;
+}
+
+.form textarea {
   margin: 19px 0 34px;
   border: 1px solid transparent;
 
@@ -50,7 +64,7 @@ form textarea {
   }
 }
 
-form button[type="submit"] {
+.form button[type="submit"] {
   padding: 10px;
   width: 265px;
 
@@ -66,33 +80,4 @@ form button[type="submit"] {
     width: 100%;
     margin: 0 0 5px 0;
   }
-}
-
-.form__agree label {
-  margin-top: 16px;
-}
-
-/* Checkbox */
-
-.form__agree input {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 23px;
-  margin-left: -28px;
-  background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
-
-  @media (max-width: 1023px) {
-    top: 17px;
-    margin-left: -26px;
-  }
-
-  @media (max-width: 767px) {
-    top: 5px;
-    margin-left: -27px;
-  }
-}
-
-.form__agree input:checked {
-  background: url("../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
 }

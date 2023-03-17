@@ -7,8 +7,8 @@ const menuBtn = document.querySelector('.menu__button');
 const modal = document.querySelector('.modal');
 const closeBtn = modal.querySelector('.modal__close-btn');
 const overlay = modal.querySelector('.modal__overlay');
-const form = document.querySelector('form');
-const modalForm = document.querySelector('form.popup__form');
+const form = document.querySelector('.form');
+const modalForm = document.querySelector('popup__form');
 
 const setTabindex = (arr, num) => {
   arr.forEach((e) => {
@@ -34,9 +34,9 @@ const createElementsArr = () => {
 };
 
 const getFormInputs = (_form) => {
-  const inputName = _form.querySelector('input[name="Имя"]');
-  const inputPhone = _form.querySelector('input[name="Телефон"]');
-  const inputQuestion = _form.querySelector('textarea[name="Вопрос"]');
+  const inputName = _form.querySelector('input[name="имя"]');
+  const inputPhone = _form.querySelector('input[name="телефон"]');
+  const inputQuestion = _form.querySelector('textarea[name="вопрос"]');
 
   return {
     inputName,
@@ -56,9 +56,9 @@ const onFormSubmit = (formToSubmit) => {
     if (!isPhone(inputPhone.value)) {
       e.preventDefault();
     } else {
-      localStorage.setItem('Имя', inputName.value);
-      localStorage.setItem('Телефон', inputPhone.value);
-      localStorage.setItem('Вопрос', inputQuestion.value);
+      localStorage.setItem('имя', inputName.value);
+      localStorage.setItem('телефон', inputPhone.value);
+      localStorage.setItem('вопрос', inputQuestion.value);
     }
   });
 };
@@ -96,7 +96,7 @@ const openModal = () => {
       const focusableContent = modal.querySelectorAll(focusableElements);
       setTabindex(focusableContent, 0);
       setTimeout(() => {
-        modal.querySelector('input[name="Имя"]').focus({focusVisible: true});
+        modal.querySelector('input[name="имя"]').focus({focusVisible: true});
       }, 500);
     }
   });
