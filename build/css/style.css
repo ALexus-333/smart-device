@@ -895,6 +895,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -905,7 +907,7 @@ button,
 }
 
 .promo {
-  background: url("../img/promo/promo-bg.jpg") center center/cover no-repeat;
+  background: url("../img/promo/promo-bg.webp") center center/cover no-repeat;
   background-color: #041827;
   padding-bottom: 280px;
 }
@@ -2429,6 +2431,6 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .promo {
-    background-image: url("../img/promo/promo-bg@2x.jpg");
+    background-image: url("../img/promo/promo-bg@2x.webp");
   }
 }

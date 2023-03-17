@@ -8,7 +8,7 @@ const modal = document.querySelector('.modal');
 const closeBtn = modal.querySelector('.modal__close-btn');
 const overlay = modal.querySelector('.modal__overlay');
 const form = document.querySelector('.form');
-const modalForm = document.querySelector('popup__form');
+const modalForm = document.querySelector('.popup__form');
 
 const setTabindex = (arr, num) => {
   arr.forEach((e) => {

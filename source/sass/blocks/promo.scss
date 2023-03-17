@@ -1,10 +1,10 @@
 .promo {
-  background: url("../img/promo/promo-bg.jpg") center (center/cover) no-repeat;
+  background: url("../img/promo/promo-bg.webp") center (center/cover) no-repeat;
   background-color: $color-black-pearl;
   padding-bottom: 280px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/promo/promo-bg@2x.jpg");
+    background-image: url("../img/promo/promo-bg@2x.webp");
   }
 
   @media (max-width: 1023px) {

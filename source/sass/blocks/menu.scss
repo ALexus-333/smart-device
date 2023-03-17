@@ -82,6 +82,7 @@
 .menu__logo {
   width: 215px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 
   @media (max-width: 767px) {
