@@ -7,7 +7,7 @@
 }
 
 .menu__contacts {
-  width: 460px;
+  width: 468px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -15,7 +15,7 @@
   margin-top: 15px;
 
   @media (max-width: 1023px) {
-    padding: 0 30px 10px 0;
+    padding: 0 25px 10px 0;
     width: 110px;
     margin-top: 10px;
   }
@@ -23,7 +23,20 @@
   @media (max-width: 767px) {
     width: 100px;
     margin: 0;
-    padding: 0 20px 4px 0;
+    padding: 5px 15px 4px 0;
+  }
+}
+
+.menu__contacts-wrapper-email,
+.menu__contacts-wrapper-phone {
+  display: flex;
+  flex-wrap: wrap;
+  width: 220px;
+  gap: 10px;
+
+  @media (max-width: 1023px) {
+    display: block;
+    width: auto;
   }
 }
 
@@ -70,6 +83,7 @@
 
 .menu__email-icon,
 .menu__phone-icon {
+  margin-right: 5px;
   width: 20px;
   height: 20px;
   fill: $color-deep-sky-blue;
@@ -87,6 +101,10 @@
 
   @media (max-width: 767px) {
     width: 35px;
+  }
+
+  @include hover-focus {
+    opacity: 0.9;
   }
 }
 

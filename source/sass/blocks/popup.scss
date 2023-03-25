@@ -1,6 +1,7 @@
 .popup {
   width: 500px;
   top: 145px;
+  left: 702px;
 }
 
 .popup__form {
@@ -11,7 +12,7 @@
     "text"
     "btn"
     "agree";
-  grid-row-gap: 20px;
+  grid-row-gap: 17px;
   grid-template-columns: 1fr;
 }
 
@@ -28,7 +29,7 @@
   }
 
   @include hover-focus {
-    border-color: $color-school-bus-yellow;
+    border-color: $color-default-white;
   }
 }
 
@@ -61,16 +62,16 @@
   margin: 0;
 
   @include hover-focus {
-    border: 1px solid $color-school-bus-yellow;
+    border: 1px solid $color-default-white;
   }
 }
 
 .popup button[type="submit"] {
   width: 100%;
   padding: 14px;
-  margin-top: 5px;
+  margin-top: 9px;
 
   @include hover-focus {
-    color: $color-school-bus-yellow;
+    color: $color-default-white;
   }
 }

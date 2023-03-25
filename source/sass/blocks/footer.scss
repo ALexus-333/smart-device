@@ -17,14 +17,14 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 215px 1fr;
-  grid-column-gap: 160px;
+  grid-column-gap: 157px;
 
   @include vp-1439 {
     padding: 0 32px;
   }
 
   @media (max-width: 1023px) {
-    padding: 0 45px 0 50px;
+    padding: 0 45px 0 47px;
     grid-template-columns: 1fr;
   }
 
@@ -39,16 +39,17 @@
   margin-top: 17px;
 
   @media (max-width: 1023px) {
+    margin-top: 14px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 23px;
+    padding: 0 0 22px 3px;
   }
 
   @media (max-width: 767px) {
     flex-direction: column;
     border-bottom: 1px solid $color-default-white;
-    padding-bottom: 17px;
+    padding: 0 0 29px 0;
   }
 }
 
@@ -59,10 +60,14 @@
   padding-bottom: 20px;
 
   @media (max-width: 1023px) {
-    padding-bottom: 0;
+    padding: 3px 0 0 0;
   }
 
   @media (max-width: 767px) {
-    padding-bottom: 9px;
+    padding: 0 5px 9px 0;
+  }
+
+  @include hover-focus {
+    opacity: 0.9;
   }
 }

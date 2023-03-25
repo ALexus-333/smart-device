@@ -4,7 +4,7 @@
   grid-column-gap: 20px;
 
   @media (max-width: 1023px) {
-    grid-column-gap: 30px;
+    grid-column-gap: 22px;
   }
 
   @media (max-width: 767px) {
@@ -26,6 +26,7 @@
 
 .accordion__item {
   overflow: hidden;
+  padding-left: 3px;
 
   &--site-list {
     display: flex;
@@ -36,7 +37,7 @@
 
   &--contacts {
     @media (min-width: 1024px) {
-      padding-left: 67px;
+      padding-left: 69px;
     }
   }
 

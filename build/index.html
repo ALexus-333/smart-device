@@ -29,18 +29,22 @@
             </a>
           </div>
           <div class="menu__contacts">
-            <a class="menu__email" href="mailto:info@sd.ru">
-              <svg class="menu__email-icon" width="20" height="20">
-                <use href="img/sprite.svg#email"></use>
-              </svg>
-              <span class="menu__text">info@sd.ru</span>
-            </a>
-            <a class="menu__phone" href="tel:+74950005252">
-              <svg class="menu__phone-icon" width="20" height="20">
-                <use href="img/sprite.svg#phone-call"></use>
-              </svg>
-              <span class="menu__text">+7 (495) 000 52 52</span>
-            </a>
+            <div class="menu__contacts-wrapper-email">
+              <a class="menu__email" href="mailto:info@sd.ru" aria-label="ссылка email почты для связи">
+                <svg class="menu__email-icon" width="20" height="20">
+                  <use href="img/sprite.svg#email"></use>
+                </svg>
+                <span class="menu__text">info@sd.ru</span>
+              </a>
+            </div>
+            <div class="menu__contacts-wrapper-phone">
+              <a class="menu__phone" href="tel:+74950005252" aria-label="ссылка номера телефона">
+                <svg class="menu__phone-icon" width="20" height="20">
+                  <use href="img/sprite.svg#phone-call"></use>
+                </svg>
+                <span class="menu__text">+7 (495) 000 52 52</span>
+              </a>
+            </div>
           </div>
           <a class="menu__button menu__a button" href="modal.html" target="_blank">Заказать звонок</a>
         </div>
@@ -105,26 +109,25 @@
           <div class="about__container container">
             <div class="about__img-wrapper">
               <picture>
-                <source type="image/webp" srcset="img/date.webp 1x, img/date@2x.webp 2x">
-                <img class="about__img" src="img/date.png" srcset="img/date@2x.png 2x" alt="Изображение 2022." width="150" height="320">
+                <source type="image/webp" loading="lazy" srcset="img/date.webp 1x, img/date@2x.webp 2x">
+                <img class="about__img" loading="lazy" src="img/date.png" srcset="img/date@2x.png 2x" alt="Изображение 2022." width="150" height="320">
               </picture>
             </div>
             <div class="about__text-wrapper">
               <h2 class="about__title">О компании</h2>
               <p>
-                Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
-                1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+                Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997 года.
+                Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10 дней.
               </p>
               <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<br>
-                <span class="about__text about__text--tablet">Печатные платы и комплектующие Service Devices применяются
-                  на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
+                <span class="about__text about__text--tablet">Печатные платы и&nbsp;комплектующие Service Devices применяются
+                  на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
                   Среди наших клиентов крупнейшие Производители светотехники России.</span>
               </p>
-              <p class="about__text about__text--fulltext is-hidden">Smart Device - это команда профессионалов. Через нас
-                прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент
-                насчитывается более 14 офисов по всей стране и 20 городов присутствия.
-                Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании.
-                Использование инновационнытехнологий помогает экономить деньги и время наших клиентов.
+              <p class="about__text about__text--fulltext is-hidden">Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000 клиентов,
+                70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14 офисов по&nbsp;всей стране и&nbsp;20 городов присутствия.
+                Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании.
+                Использование инновационнытехнологий помогает экономить деньги и&nbsp;время наших клиентов.
               </p>
             </div>
             <button class="about__button button">Подробнее</button>
@@ -145,12 +148,12 @@
                 </div>
                 <div class="products__img-wrapper">
                   <picture>
-                    <source type="image/webp" media="(max-width: 320px)" srcset="img/products/mobile/background-card-1-mobile.webp 1x, img/products/mobile/background-card-1-mobile@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1439px)" srcset="img/products/tablet/background-card-1-tablet.webp 1x, img/products/tablet/background-card-1-tablet@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1920px)" srcset="img/products/desktop/background-card-1-desktop.webp 1x, img/products/desktop/background-card-1-desktop@2x.webp 2x">
-                    <source media="(max-width: 320px)" srcset="img/products/mobile/background-card-1-mobile.jpg 1x, img/products/mobile/background-card-1-mobile@2x.jpg 2x">
-                    <source media="(max-width: 1439px)" srcset="img/products/tablet/background-card-1-tablet.jpg 1x, img/products/tablet/background-card-1-tablet@2x.jpg 2x">
-                    <img src="img/products/desktop/background-card-1-desktop.jpg" srcset="img/products/desktop/background-card-1-desktop@2x.jpg 2x" alt=" Изображение платы." width="350" height="650">
+                    <source type="image/webp" media="(max-width: 320px)"  loading="lazy" srcset="img/products/mobile/background-card-1-mobile.webp 1x, img/products/mobile/background-card-1-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1439px)" loading="lazy" srcset="img/products/tablet/background-card-1-tablet.webp 1x, img/products/tablet/background-card-1-tablet@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1920px)" loading="lazy" srcset="img/products/desktop/background-card-1-desktop.webp 1x, img/products/desktop/background-card-1-desktop@2x.webp 2x">
+                    <source media="(max-width: 320px)" loading="lazy" srcset="img/products/mobile/background-card-1-mobile.jpg 1x, img/products/mobile/background-card-1-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1439px)" loading="lazy" srcset="img/products/tablet/background-card-1-tablet.jpg 1x, img/products/tablet/background-card-1-tablet@2x.jpg 2x">
+                    <img src="img/products/desktop/background-card-1-desktop.jpg" loading="lazy" srcset="img/products/desktop/background-card-1-desktop@2x.jpg 2x" alt=" Изображение платы." width="350" height="650">
                   </picture>
                 </div>
                 <div class="products__arrow-wrapper">
@@ -165,12 +168,12 @@
                 </div>
                 <div class="products__img-wrapper">
                   <picture>
-                    <source type="image/webp" media="(max-width: 320px)" srcset="img/products/mobile/background-card-2-mobile.webp 1x, img/products/mobile/background-card-2-mobile@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1439px)" srcset="img/products/tablet/background-card-2-tablet.webp 1x, img/products/tablet/background-card-2-tablet@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1920px)" srcset="img/products/desktop/background-card-2-desktop.webp 1x, img/products/desktop/background-card-2-desktop@2x.webp 2x">
-                    <source media="(max-width: 320px)" srcset="img/products/mobile/background-card-2-mobile.jpg 1x, img/products/mobile/background-card-2-mobile@2x.jpg 2x">
-                    <source media="(max-width: 1439px)" srcset="img/products/tablet/background-card-2-tablet.jpg 1x, img/products/tablet/background-card-2-tablet@2x.jpg 2x">
-                    <img src="img/products/desktop/background-card-2-desktop.jpg" srcset="img/products/desktop/background-card-2-desktop@2x.jpg 2x" alt="Изображение платы." width="350" height="650">
+                    <source type="image/webp" media="(max-width: 320px)" loading="lazy" srcset="img/products/mobile/background-card-2-mobile.webp 1x, img/products/mobile/background-card-2-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1439px)" loading="lazy" srcset="img/products/tablet/background-card-2-tablet.webp 1x, img/products/tablet/background-card-2-tablet@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1920px)" loading="lazy" srcset="img/products/desktop/background-card-2-desktop.webp 1x, img/products/desktop/background-card-2-desktop@2x.webp 2x">
+                    <source media="(max-width: 320px)" loading="lazy" srcset="img/products/mobile/background-card-2-mobile.jpg 1x, img/products/mobile/background-card-2-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1439px)"  loading="lazy" srcset="img/products/tablet/background-card-2-tablet.jpg 1x, img/products/tablet/background-card-2-tablet@2x.jpg 2x">
+                    <img src="img/products/desktop/background-card-2-desktop.jpg" loading="lazy" srcset="img/products/desktop/background-card-2-desktop@2x.jpg 2x" alt="Изображение платы." width="350" height="650">
                   </picture>
                 </div>
                 <div class="products__arrow-wrapper">
@@ -185,12 +188,12 @@
                 </div>
                 <div class="products__img-wrapper">
                   <picture>
-                    <source type="image/webp" media="(max-width: 320px)" srcset="img/products/mobile/background-card-3-mobile.webp 1x, img/products/mobile/background-card-3-mobile@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1439px)" srcset="img/products/tablet/background-card-3-tablet.webp 1x, img/products/tablet/background-card-3-tablet@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1920px)" srcset="img/products/desktop/background-card-3-desktop.webp 1x, img/products/desktop/background-card-3-desktop@2x.webp 2x">
-                    <source media="(max-width: 320px)" srcset="img/products/mobile/background-card-3-mobile.jpg 1x, img/products/mobile/background-card-3-mobile@2x.jpg 2x">
-                    <source media="(max-width: 1439px)" srcset="img/products/tablet/background-card-3-tablet.jpg 1x, img/products/tablet/background-card-3-tablet@2x.jpg 2x">
-                    <img src="img/products/desktop/background-card-3-desktop.jpg" srcset="img/products/desktop/background-card-3-desktop@2x.jpg 2x" alt="Изображение платы." width="350" height="650">
+                    <source type="image/webp" media="(max-width: 320px)" loading="lazy" srcset="img/products/mobile/background-card-3-mobile.webp 1x, img/products/mobile/background-card-3-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1439px)" loading="lazy" srcset="img/products/tablet/background-card-3-tablet.webp 1x, img/products/tablet/background-card-3-tablet@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1920px)" loading="lazy" srcset="img/products/desktop/background-card-3-desktop.webp 1x, img/products/desktop/background-card-3-desktop@2x.webp 2x">
+                    <source media="(max-width: 320px)" loading="lazy" srcset="img/products/mobile/background-card-3-mobile.jpg 1x, img/products/mobile/background-card-3-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1439px)" loading="lazy" srcset="img/products/tablet/background-card-3-tablet.jpg 1x, img/products/tablet/background-card-3-tablet@2x.jpg 2x">
+                    <img src="img/products/desktop/background-card-3-desktop.jpg" loading="lazy" srcset="img/products/desktop/background-card-3-desktop@2x.jpg 2x" alt="Изображение платы." width="350" height="650">
                   </picture>
                 </div>
                 <div class="products__arrow-wrapper">
@@ -207,8 +210,8 @@
           <div class="feedback__wrapper container">
             <div class="feedback__img-wrapper">
               <picture>
-                <source type="image/webp" srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x">
-                <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" alt="Самолётик." width="510" height="285">
+                <source type="image/webp" loading="lazy" srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x">
+                <img src="img/paper-airplane.png" loading="lazy" srcset="img/paper-airplane@2x.png 2x" alt="Самолётик." width="510" height="285">
               </picture>
             </div>
             <div class="feedback__content-wrapper">
@@ -216,16 +219,18 @@
               <p class="feedback__subtitle">Мы проконсультируем Вас бесплатно</p>
               <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
                 <div class="form__field">
-                  <input name="имя" type="text" placeholder="Имя" required>
+                  <input name="имя" type="text" placeholder="Имя" required tabindex="1">
                 </div>
                 <div class="form__field">
-                  <input name="телефон" type="tel" placeholder="Телефон" required>
+                  <input name="телефон" type="tel" placeholder="Телефон" required tabindex="2">
                 </div>
-                <textarea name="вопрос" placeholder="Ваш вопрос"  aria-label="Ваш вопрос"></textarea>
-                <button type="submit">Задать вопрос</button>
+                <textarea name="вопрос" placeholder="Ваш вопрос"  aria-label="Ваш вопрос" tabindex="3"></textarea>
+                <button type="submit" tabindex="5">Задать вопрос</button>
                 <div class="form__field form__field--agree">
-                  <input type="checkbox" required checked>
-                  <span>Я согласен на обработку персональных данных</span>
+                  <label>
+                    <input type="checkbox" required checked tabindex="4">
+                    <span>Я согласен на обработку персональных данных</span>
+                  </label>
                 </div>
               </form>
             </div>
@@ -238,7 +243,7 @@
         <div class="footer__inner">
           <div class="footer__wrapper">
             <a class="footer__logo" href="#">
-              <img src="img/svg/logo.svg" alt="Логотип SmartDevice." width="215" height="55">
+              <img src="img/svg/logo.svg" loading="lazy" alt="Логотип SmartDevice." width="215" height="55">
             </a>
             <ul class="social-list">
               <li class="social-list__item">
@@ -334,19 +339,19 @@
             <p class="popup__subtitle">Оставьте контакты, мы проконсультируем<br>вас бесплатно в удобное время</p>
             <form class="popup__form form" method="POST" action="https://echo.htmlacademy.ru">
               <div class="form__field">
-                <input name="имя" type="text" placeholder="Имя" required autofocus>
+                <input name="имя" type="text" placeholder="Имя" required autofocus tabindex="1">
               </div>
               <div class="form__field form__field--tel">
-                <input name="телефон" type="tel" placeholder="Телефон" required>
+                <input name="телефон" type="tel" placeholder="Телефон" required tabindex="2">
               </div>
-              <textarea name="вопрос" placeholder="Ваш вопрос"></textarea>
-              <button type="submit">Отправить</button>
+              <textarea name="вопрос" placeholder="Ваш вопрос" tabindex="3"></textarea>
+              <button type="submit" tabindex="5">Отправить</button>
               <div class="form__field form__field--agree form__field--position">
-                  <input type="checkbox" required checked>
+                  <input type="checkbox" required checked tabindex="4">
                   <span>Я согласен на обработку персональных данных</span>
               </div>
             </form>
-            <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal tabindex="6">
               <svg width="20" height="20">
                 <use href="img/sprite.svg#icon-close"></use>
               </svg>

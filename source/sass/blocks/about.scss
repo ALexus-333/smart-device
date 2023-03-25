@@ -115,7 +115,7 @@
   background-color: $color-default-white;
   text-transform: uppercase;
   width: 180px;
-  height: 47px;
+  min-height: 45px;
   padding: 10px 15px;
   grid-area: btn;
   cursor: pointer;
@@ -130,7 +130,7 @@
 
   @media (max-width: 767px) {
     width: 159px;
-    height: 36px;
+    min-height: 35px;
     padding: 7px 15px;
   }
 }

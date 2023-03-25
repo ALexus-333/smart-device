@@ -106,6 +106,10 @@
   @media (max-width: 1023px) {
     min-height: 250px;
   }
+
+  @include hover-focus {
+    opacity: 0.9;
+  }
 }
 
 .products__heading {
