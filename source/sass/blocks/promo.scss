@@ -3,8 +3,10 @@
   background-color: $color-black-pearl;
   padding-bottom: 280px;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/promo/promo-bg@2x.webp");
+  @media (min-width: 768px) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/promo/promo-bg@2x.webp");
+    }
   }
 
   @media (max-width: 1023px) {
@@ -16,7 +18,12 @@
   @media (max-width: 767px) {
     padding-bottom: 190px;
     margin: 0;
-    background-position: -228px 0;
+    background-position: 100%;
+    background-image: url("../img/promo/promo-bg-mob.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/promo/promo-bg-mob@2x.webp");
+    }
   }
 }
 

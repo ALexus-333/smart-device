@@ -1,3 +1,5 @@
+import '../../utils/focus-lock.js';
+
 const body = document.body;
 const arrayTagA = document.querySelectorAll('a');
 const arrayTagInput = document.querySelectorAll('input');
@@ -91,6 +93,7 @@ const openModal = () => {
       e.preventDefault();
       modal.classList.add('is-active');
       body.style.overflow = 'hidden';
+      window.focusLock.lock('.modal');
       setTabindex(createElementsArr(), -1);
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       const focusableContent = modal.querySelectorAll(focusableElements);
@@ -107,6 +110,7 @@ const closeModal = () => {
     closeBtn.addEventListener('click', () => {
       modal.classList.remove('is-active');
       body.style.overflow = 'visible';
+      window.focusLock.unlock('.modal');
       setTabindex(createElementsArr(), 0);
     });
   }

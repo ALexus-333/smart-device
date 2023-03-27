@@ -8,12 +8,17 @@
   @include hover-focus {
     border: 1px solid $color-default-white;
   }
+
+  &:focus {
+    outline: 1px solid $color-default-white;
+  }
 }
 
 .form .form__field--agree {
   grid-area: agree;
   margin-left: 35px;
   position: relative;
+  order: 2;
 
   @media (max-width: 1023px) {
     margin-left: 26px;
@@ -22,6 +27,16 @@
   @media (max-width: 767px) {
     margin-left: 32px;
   }
+}
+
+.form .form__field--agree label {
+  @include hover-focus {
+    opacity: 0.9;
+  }
+}
+
+.form .form__field--agree input:focus + span {
+  outline: 1px solid $color-default-white;
 }
 
 .form .form__field--agree span {
@@ -39,10 +54,6 @@
   @media (max-width: 767px) {
     margin-top: 5px;
   }
-
-  @include hover-focus {
-    opacity: 0.9;
-  }
 }
 
 .form .form__field--agree input {
@@ -57,23 +68,26 @@
   background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
   cursor: pointer;
 
-  @media (max-width: 770px) {
+  &:focus {
+    border: 1px solid $color-default-white;
+    outline: none;
+  }
+
+  @media (max-width: 767px) {
     margin-top: 9px;
   }
 
-  @include hover-focus {
-    opacity: 0.9;
+  @media (min-width: 444px) and (max-width: 767px) {
+    margin-top: 0;
+  }
+
+  @media (min-width: 905px) and (max-width: 1023px) {
+    margin-top: 0;
   }
 }
 
 .form .form__field--agree input:checked {
   background: url("../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
-}
-
-.form .form__field--position input,
-.form .form__field--position span {
-  margin-top: 0;
-  top: 0;
 }
 
 .form textarea {
@@ -82,6 +96,10 @@
 
   @include hover-focus {
     border: 1px solid $color-default-white;
+  }
+
+  &:focus {
+    outline: 1px solid $color-default-white;
   }
 
   @media (max-width: 1023px) {
@@ -98,6 +116,8 @@
 .form button[type="submit"] {
   padding: 10px;
   width: 265px;
+  order: 1;
+  user-select: none;
 
   @include hover-focus {
     opacity: 0.9;

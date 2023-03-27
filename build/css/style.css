@@ -1066,6 +1066,9 @@ button,
   grid-template-columns: 150px 1fr;
   grid-column-gap: 100px;
   margin-top: 123px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
 .about__img-wrapper {
@@ -1465,12 +1468,27 @@ button,
   border: 1px solid #ffffff;
 }
 
+.form .form__field input:focus {
+  outline: 1px solid #ffffff;
+}
+
 .form .form__field--agree {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
   grid-area: agree;
   margin-left: 35px;
   position: relative;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.form .form__field--agree label.focus-visible:focus {
+  opacity: 0.9;
+}
+
+.form .form__field--agree input:focus + span {
+  outline: 1px solid #ffffff;
 }
 
 .form .form__field--agree span {
@@ -1484,10 +1502,6 @@ button,
   font-size: 14px;
   line-height: 16px;
   cursor: pointer;
-}
-
-.form .form__field--agree span.focus-visible:focus {
-  opacity: 0.9;
 }
 
 .form .form__field--agree input {
@@ -1505,18 +1519,13 @@ button,
   cursor: pointer;
 }
 
-.form .form__field--agree input.focus-visible:focus {
-  opacity: 0.9;
+.form .form__field--agree input:focus {
+  border: 1px solid #ffffff;
+  outline: none;
 }
 
 .form .form__field--agree input:checked {
   background: url("../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
-}
-
-.form .form__field--position input,
-.form .form__field--position span {
-  margin-top: 0;
-  top: 0;
 }
 
 .form textarea {
@@ -1528,9 +1537,20 @@ button,
   border: 1px solid #ffffff;
 }
 
+.form textarea:focus {
+  outline: 1px solid #ffffff;
+}
+
 .form button[type=submit] {
   padding: 10px;
   width: 265px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .form button[type=submit].focus-visible:focus {
@@ -1783,6 +1803,12 @@ button,
     }
   }
 */
+
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+  .promo {
+    background-image: url("../img/promo/promo-bg@2x.webp");
+  }
+}
 
 @media (min-width: 1024px) {
   .feedback__content-wrapper {
@@ -2061,12 +2087,6 @@ button,
   }
 }
 
-@media (max-width: 770px) {
-  .form .form__field--agree input {
-    margin-top: 9px;
-  }
-}
-
 @media (max-width: 767px) {
   .container {
     padding: 0 25px;
@@ -2127,7 +2147,8 @@ button,
   .promo {
     padding-bottom: 190px;
     margin: 0;
-    background-position: -228px 0;
+    background-position: 100%;
+    background-image: url("../img/promo/promo-bg-mob.webp");
   }
 
   .promo__content-wrapper {
@@ -2342,6 +2363,10 @@ button,
     margin-top: 5px;
   }
 
+  .form .form__field--agree input {
+    margin-top: 9px;
+  }
+
   .form textarea {
     margin: 0 0 9px;
     padding: 24px 0 119px 15px;
@@ -2438,6 +2463,24 @@ button,
   }
 }
 
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .promo {
+    background-image: url("../img/promo/promo-bg-mob@2x.webp");
+  }
+}
+
+@media (min-width: 444px) and (max-width: 767px) {
+  .form .form__field--agree input {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 905px) and (max-width: 1023px) {
+  .form .form__field--agree input {
+    margin-top: 0;
+  }
+}
+
 @media (min-width: 321px) and (max-width: 768px) {
   .social-list {
     padding-top: 2px;
@@ -2486,11 +2529,7 @@ button,
     border: 1px solid #ffffff;
   }
 
-  .form .form__field--agree span:hover:not(.focus-visible) {
-    opacity: 0.9;
-  }
-
-  .form .form__field--agree input:hover:not(.focus-visible) {
+  .form .form__field--agree label:hover:not(.focus-visible) {
     opacity: 0.9;
   }
 
@@ -2520,11 +2559,5 @@ button,
 
   .popup button[type=submit]:hover:not(.focus-visible) {
     color: #ffffff;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .promo {
-    background-image: url("../img/promo/promo-bg@2x.webp");
   }
 }
