@@ -3,7 +3,7 @@ import {openAccordion} from './modules/modals/accordion';
 import {openModal, closeModal, submitForm, submitModal, setupPhoneInputs} from './modules/modals/modal';
 import {scrollToFeedback} from './modules/modals/scroll-to';
 import {showMore} from './modules/modals/show-more';
-import {createMask} from './modules/modals/mask';
+import {initPhoneInput} from './modules/form-validate/init-phone-input';
 
 // ---------------------------------
 
@@ -29,7 +29,9 @@ window.addEventListener('DOMContentLoaded', () => {
     submitModal();
     scrollToFeedback();
     showMore();
-    createMask();
+    document.querySelectorAll('[type="tel"]'.forEach((input) => {
+      initPhoneInput(input.parentElement);
+    }));
   });
 });
 
