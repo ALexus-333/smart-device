@@ -108,6 +108,7 @@
   background-color: $color-deep-sky-blue;
   border: none;
   cursor: pointer;
+  user-select: none;
 
   &--nojs {
     @include is-hidden;

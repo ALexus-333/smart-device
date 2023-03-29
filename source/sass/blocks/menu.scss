@@ -71,6 +71,7 @@
   letter-spacing: 0.05em;
   word-break: break-word;
   margin-top: 7px;
+  user-select: none;
 
   @include hover-focus {
     opacity: 0.9;

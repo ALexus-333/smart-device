@@ -56,6 +56,10 @@
   }
 }
 
+.form .form__field-popup span {
+  margin-top: 0;
+}
+
 .form .form__field--agree input {
   padding: 15px 0 0 15px;
   margin-top: 14px;
@@ -90,6 +94,10 @@
   background: url("../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
 }
 
+.form .form__field-popup input {
+  top: -14px;
+}
+
 .form textarea {
   margin: 19px 0 34px;
   border: 1px solid transparent;
@@ -121,6 +129,10 @@
 
   @include hover-focus {
     opacity: 0.9;
+  }
+
+  &:focus {
+    outline: 1px solid $color-default-white;
   }
 
   @media (max-width: 1023px) {

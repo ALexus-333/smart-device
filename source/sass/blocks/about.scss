@@ -120,6 +120,7 @@
   padding: 10px 15px;
   grid-area: btn;
   cursor: pointer;
+  user-select: none;
 
   &--nojs {
     @include is-hidden;
