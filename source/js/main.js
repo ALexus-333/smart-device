@@ -29,9 +29,9 @@ window.addEventListener('DOMContentLoaded', () => {
     submitModal();
     scrollToFeedback();
     showMore();
-    document.querySelectorAll('[type="tel"]'.forEach((input) => {
+    document.querySelectorAll('[type="tel"]').forEach((input) => {
       initPhoneInput(input.parentElement);
-    }));
+    });
   });
 });
 
