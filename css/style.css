@@ -833,19 +833,28 @@ button,
 }
 
 .menu__contacts {
-  width: 468px;
+  width: 51.724137931%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 10px;
+  margin: 10px auto 0;
+  padding-left: 6.5%;
+}
+
+.menu__contacts > div {
+  width: 42%;
+  margin-left: 4%;
+}
+
+.menu__contacts > div:nth-child(2n) {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .menu__contacts-wrapper-email,
@@ -856,7 +865,6 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 10px;
-  margin-left: 59px;
 }
 
 .menu__text {
@@ -884,6 +892,7 @@ button,
   letter-spacing: 0.05em;
   word-break: break-word;
   margin-top: 7px;
+  margin-left: 60px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1600,8 +1609,11 @@ button,
 }
 
 .social-list__item {
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  padding: 14px 13px;
+  margin: 14px 10px 15px 15px;
+  padding: 0;
 }
 
 .social-list__item svg {
@@ -1901,6 +1913,12 @@ button,
   }
 }
 
+@media (max-width: 1160px) {
+  .menu__contacts {
+    padding-left: 0;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 50px;
@@ -1945,9 +1963,18 @@ button,
   }
 
   .menu__contacts {
-    padding: 0 28px 10px 0;
-    width: 110px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 60%;
     margin-top: 4px;
+    margin-right: 0;
+    padding: 0 35px 10px 0;
+  }
+
+  .menu__contacts > div {
+    width: auto;
+    margin-left: 34px;
   }
 
   .menu__text {
@@ -2105,15 +2132,11 @@ button,
 
   .social-list {
     width: 165px;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
     margin: 0;
   }
 
   .social-list__item {
-    width: 30px;
-    height: 30px;
-    padding: 0 7px;
+    margin: 10px 5px 10px 20px;
   }
 
   .accordion {
@@ -2152,7 +2175,7 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     border-bottom: 1px solid #ffffff;
-    padding: 0 0 29px 0;
+    padding: 0 0 14px 0;
   }
 
   .footer__logo {
@@ -2173,9 +2196,9 @@ button,
   }
 
   .menu__contacts {
-    width: 214px;
-    margin: 0 0 0 20px;
-    padding: 0;
+    width: 80%;
+    margin-top: 0;
+    padding-right: 24px;
   }
 
   .menu__logo {
@@ -2530,7 +2553,7 @@ button,
   }
 
   .social-list__item {
-    padding: 0;
+    margin: 0 12px 15px 13px;
   }
 }
 
