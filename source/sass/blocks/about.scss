@@ -1,6 +1,6 @@
 .about {
   @media (max-width: 767px) {
-    margin: 19px 0 80px;
+    margin: 45px 0 80px;
   }
 }
 
@@ -71,7 +71,6 @@
   @media (max-width: 767px) {
     font-size: 28px;
     line-height: 40px;
-    padding-bottom: 10px;
   }
 }
 
@@ -89,7 +88,11 @@
   @media (max-width: 767px) {
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+
+    &:nth-child(n + 3) {
+      margin-bottom: 13px;
+    }
   }
 }
 
@@ -131,7 +134,7 @@
   }
 
   @media (max-width: 767px) {
-    width: 159px;
+    width: 160px;
     min-height: 35px;
     padding: 7px 15px;
   }

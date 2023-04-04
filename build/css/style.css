@@ -648,7 +648,7 @@ button,
 
 .footer {
   background-color: #041827;
-  padding: 34px 0 55px;
+  padding: 34px 0;
   min-height: 280px;
 }
 
@@ -685,7 +685,7 @@ button,
 }
 
 .footer__logo.focus-visible:focus {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .button {
@@ -824,9 +824,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -842,13 +839,13 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .menu__contacts-wrapper-email,
@@ -858,8 +855,8 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 220px;
   gap: 10px;
+  margin-left: 59px;
 }
 
 .menu__text {
@@ -899,7 +896,8 @@ button,
 
 .menu__email-icon,
 .menu__phone-icon {
-  margin-right: 5px;
+  position: relative;
+  top: 5px;
   width: 20px;
   height: 20px;
   fill: #00b2ff;
@@ -908,6 +906,10 @@ button,
 .menu__email-icon.focus-visible:focus,
 .menu__phone-icon.focus-visible:focus {
   fill: #ffd801;
+}
+
+.menu__phone-icon {
+  left: 5px;
 }
 
 .menu__logo {
@@ -923,7 +925,7 @@ button,
 }
 
 .menu__logo.focus-visible:focus {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .menu__logo img {
@@ -1241,7 +1243,7 @@ button,
 
 .products__arrow-wrapper {
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   right: 0;
   width: 60px;
   height: 60px;
@@ -1255,8 +1257,8 @@ button,
   width: 10px;
   height: 10px;
   fill: #ffffff;
-  top: 40%;
-  right: 40%;
+  top: 37%;
+  right: 34%;
 }
 
 .feedback {
@@ -1474,6 +1476,7 @@ button,
 
 .form .form__field input {
   border: 1px solid transparent;
+  padding: 14px 0 15px 14px;
 }
 
 .form .form__field input.focus-visible:focus {
@@ -1521,7 +1524,7 @@ button,
 }
 
 .form .form__field--agree input {
-  padding: 15px 0 0 15px;
+  padding: 14px 0 0 15px;
   margin-top: 14px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1598,7 +1601,7 @@ button,
 
 .social-list__item {
   cursor: pointer;
-  padding: 9px 8px;
+  padding: 14px 13px;
 }
 
 .social-list__item svg {
@@ -1606,7 +1609,7 @@ button,
 }
 
 .social-list__item svg.focus-visible:focus {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .accordion {
@@ -1671,14 +1674,18 @@ button,
   padding-bottom: 9px;
 }
 
+.accordion__item--contacts .accordion__list-item:nth-child(1) {
+  cursor: default;
+}
+
 .accordion__list-item a.focus-visible:focus {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .popup {
   width: 500px;
   top: 145px;
-  left: 702px;
+  margin: auto;
 }
 
 .popup__form {
@@ -1859,9 +1866,9 @@ button,
   }
 }
 
-@media (min-width: 1920px) {
+@media (max-width: 1920px) {
   .feedback__img-wrapper img {
-    padding-top: 80px;
+    padding: 80px 0 61px 0;
   }
 }
 
@@ -1909,7 +1916,7 @@ button,
   }
 
   .footer {
-    padding-top: 30px;
+    padding: 30px 0 53px;
   }
 
   .footer__inner {
@@ -1934,19 +1941,13 @@ button,
   }
 
   .footer__logo {
-    padding: 3px 0 0 0;
+    padding: 6px 0 0 0;
   }
 
   .menu__contacts {
-    padding: 0 25px 10px 0;
+    padding: 0 28px 10px 0;
     width: 110px;
-    margin-top: 10px;
-  }
-
-  .menu__contacts-wrapper-email,
-  .menu__contacts-wrapper-phone {
-    display: block;
-    width: auto;
+    margin-top: 4px;
   }
 
   .menu__text {
@@ -1974,7 +1975,7 @@ button,
   }
 
   .promo__content-wrapper p {
-    padding-bottom: 58px;
+    padding-bottom: 57px;
   }
 
   .promo__button {
@@ -1988,6 +1989,14 @@ button,
   .features__item {
     min-height: 360px;
     padding: 40px 36px 28px 40px;
+  }
+
+  .features__item:nth-child(n+3) h3 {
+    padding: 6px 0;
+  }
+
+  .features__item:nth-child(n+4) h3 {
+    padding: 3px 0;
   }
 
   .features__item h3 {
@@ -2020,8 +2029,8 @@ button,
   }
 
   .products {
-    margin-top: 77px;
-    padding-bottom: 75px;
+    margin-top: 80px;
+    padding-bottom: 76px;
   }
 
   .products__title {
@@ -2042,12 +2051,16 @@ button,
   .products__heading {
     font-size: 20px;
     line-height: 30px;
-    padding: 40px 475px 0 45px;
+    padding: 38px 475px 0 45px;
+  }
+
+  .products__arrow-wrapper {
+    bottom: -1px;
   }
 
   .feedback {
     background: #00b2ff;
-    padding: 47px 0 125px;
+    padding: 47px 0 124px;
   }
 
   .feedback__wrapper {
@@ -2061,7 +2074,7 @@ button,
   }
 
   .feedback__title {
-    margin: 0 0 8px 0;
+    margin: 0 0 7px 0;
   }
 
   .feedback__subtitle {
@@ -2082,8 +2095,8 @@ button,
   }
 
   .form textarea {
-    margin: 20px 0 38px;
-    padding: 30px 0 79px 15px;
+    margin: 18px 0 35px;
+    padding: 30px 0 81px 15px;
   }
 
   .form button[type=submit] {
@@ -2092,14 +2105,15 @@ button,
 
   .social-list {
     width: 165px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
     margin: 0;
   }
 
   .social-list__item {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-    padding: 0 15px;
+    width: 30px;
+    height: 30px;
+    padding: 0 7px;
   }
 
   .accordion {
@@ -2125,7 +2139,7 @@ button,
   }
 
   .footer {
-    padding-top: 18px;
+    padding: 18px 0 34px;
   }
 
   .footer__inner {
@@ -2142,7 +2156,7 @@ button,
   }
 
   .footer__logo {
-    padding: 0 5px 9px 0;
+    padding: 3px 5px 7px 0;
   }
 
   .modal__wrapper {
@@ -2159,9 +2173,9 @@ button,
   }
 
   .menu__contacts {
-    width: 100px;
-    margin: 0;
-    padding: 5px 15px 4px 0;
+    width: 214px;
+    margin: 0 0 0 20px;
+    padding: 0;
   }
 
   .menu__logo {
@@ -2188,7 +2202,7 @@ button,
   .promo__content-wrapper p {
     font-size: 14px;
     line-height: 21px;
-    padding-bottom: 45px;
+    padding-bottom: 46px;
   }
 
   .promo__content-wrapper p br {
@@ -2223,9 +2237,17 @@ button,
     padding: 31px 30px 0 25px;
   }
 
+  .features__item:nth-child(n+3) {
+    min-height: 326px;
+  }
+
   .features__item-icon {
     width: 30px;
     height: 30px;
+  }
+
+  .features__item:nth-child(n+3) h3 {
+    padding: 12px 0 12px;
   }
 
   .features__item h3 {
@@ -2240,7 +2262,7 @@ button,
   }
 
   .about {
-    margin: 19px 0 80px;
+    margin: 45px 0 80px;
   }
 
   .about__container {
@@ -2255,13 +2277,16 @@ button,
   .about__title {
     font-size: 28px;
     line-height: 40px;
-    padding-bottom: 10px;
   }
 
   .about p {
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+  }
+
+  .about p:nth-child(n+3) {
+    margin-bottom: 13px;
   }
 
   .about__text--tablet {
@@ -2269,13 +2294,13 @@ button,
   }
 
   .about__button {
-    width: 159px;
+    width: 160px;
     min-height: 35px;
     padding: 7px 15px;
   }
 
   .products {
-    padding: 47px 0 86px;
+    padding: 47px 0 85px;
     margin-top: 0;
   }
 
@@ -2308,18 +2333,19 @@ button,
   .products__arrow-wrapper {
     width: 40px;
     height: 40px;
+    bottom: 1px;
   }
 
   .feedback {
-    padding: 47px 0 89px;
+    padding: 47px 0 88px;
   }
 
   .feedback__form {
-    -ms-grid-rows: auto 17px auto 17px auto 17px auto 17px auto;
+    -ms-grid-rows: auto 19px auto 19px auto 19px auto 19px auto;
     grid-template-areas: "name" "tel" "text" "btn" "agree";
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-row-gap: 17px;
+    grid-row-gap: 19px;
   }
 
   .feedback__form > .about__text-wrapper {
@@ -2388,20 +2414,17 @@ button,
   }
 
   .form .form__field--agree input {
-    margin-top: 9px;
+    margin-top: 5px;
   }
 
   .form textarea {
-    margin: 0 0 9px;
-    padding: 24px 0 119px 15px;
+    margin: 0 0 10px;
+    padding: 23px 0 114px 14px;
   }
 
   .form button[type=submit] {
     width: 100%;
-  }
-
-  .social-list__item {
-    padding: 6px 9px;
+    min-height: 45px;
   }
 
   .accordion {
@@ -2426,11 +2449,11 @@ button,
   }
 
   .accordion__item {
-    padding: 0 25px;
+    padding: 0 25px 3px 25px;
   }
 
   .accordion__title {
-    padding: 22px 0;
+    padding: 22px 0 19px;
     margin: 0;
     cursor: pointer;
   }
@@ -2479,6 +2502,14 @@ button,
   }
 
   .accordion__list-item {
+    padding-bottom: 12px;
+  }
+
+  .accordion__list-item:nth-child(1) {
+    padding-bottom: 21px;
+  }
+
+  .accordion__list-item:nth-child(4) {
     padding-bottom: 15px;
   }
 
@@ -2490,6 +2521,16 @@ button,
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .promo {
     background-image: url("../img/promo/promo-bg-mob@2x.webp");
+  }
+}
+
+@media (max-width: 320px) {
+  .social-list {
+    margin-top: 13px;
+  }
+
+  .social-list__item {
+    padding: 0;
   }
 }
 
@@ -2513,7 +2554,7 @@ button,
 
 @media (hover: hover) {
   .footer__logo:hover:not(.focus-visible) {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   .modal__close-btn:hover:not(.focus-visible) {
@@ -2534,7 +2575,7 @@ button,
   }
 
   .menu__logo:hover:not(.focus-visible) {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   .promo__button:hover:not(.focus-visible) {
@@ -2566,11 +2607,11 @@ button,
   }
 
   .social-list__item svg:hover:not(.focus-visible) {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   .accordion__list-item a:hover:not(.focus-visible) {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   .popup input:hover:not(.focus-visible) {

@@ -46,7 +46,7 @@
   }
 
   @media (max-width: 767px) {
-    padding: 0 25px;
+    padding: 0 25px 3px 25px;
   }
 }
 
@@ -70,7 +70,7 @@
   }
 
   @media (max-width: 767px) {
-    padding: 22px 0;
+    padding: 22px 0 19px;
     margin: 0;
     cursor: pointer;
 
@@ -137,8 +137,20 @@
   padding-bottom: 9px;
 
   @media (max-width: 767px) {
-    padding-bottom: 15px;
+    padding-bottom: 12px;
+
+    &:nth-child(1) {
+      padding-bottom: 21px;
+    }
+
+    &:nth-child(4) {
+      padding-bottom: 15px;
+    }
   }
+}
+
+.accordion__item--contacts .accordion__list-item:nth-child(1) {
+  cursor: default;
 }
 
 .accordion__list-item br {
@@ -149,6 +161,6 @@
 
 .accordion__list-item a {
   @include hover-focus {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 }

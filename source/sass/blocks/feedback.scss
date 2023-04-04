@@ -8,11 +8,11 @@
 
   @media (max-width: 1023px) {
     background: $color-deep-sky-blue;
-    padding: 47px 0 125px;
+    padding: 47px 0 124px;
   }
 
   @media (max-width: 767px) {
-    padding: 47px 0 89px;
+    padding: 47px 0 88px;
   }
 }
 
@@ -46,7 +46,7 @@
       "btn"
       "agree";
     grid-template-columns: 1fr;
-    grid-row-gap: 17px;
+    grid-row-gap: 19px;
   }
 }
 
@@ -59,8 +59,8 @@
 }
 
 .feedback__img-wrapper img {
-  @media (min-width: 1920px) {
-    padding-top: 80px;
+  @media (max-width: 1920px) {
+    padding: 80px 0 61px 0;
   }
 }
 
@@ -83,7 +83,7 @@
   margin: 0 0 15px 0;
 
   @media (max-width: 1023px) {
-    margin: 0 0 8px 0;
+    margin: 0 0 7px 0;
   }
 
   @media (max-width: 767px) {
